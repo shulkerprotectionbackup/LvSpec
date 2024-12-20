@@ -1,0 +1,6 @@
+name: LvSpec
+version: '${version}'
+main: mc.lpvania.lvspec.Plugin
+api-version: '1.16'
+authors: [LPVania]
+website: t.me/LPVania
