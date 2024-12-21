@@ -1,0 +1,85 @@
+#            Разрешение:
+# Для использования плагина - SoulSpec.*
+
+#       Плейсхолдер:
+# 1. {player} - Никнейм
+
+messages:
+  spec_notification: |-
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fЗа тобой гонится &#CB2D3E&lс&#D2323D&lо&#D9373C&lф&#E13D3C&lт&#E8423B&lе&#EF473A&lр
+    &f   &#FFA43E&l⎝ &fТогда пиши в чат &7» &#3EFFB1&lспек &7&oЛибо &#3EFFB1&lspec &7«
+    &f
+  no_permission: '&#FFA43E&l[s&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ] &8» &fУ вас нету разрешения'
+  request_player: |- #"&aYou are now spectating &b{player} &a."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fЗапрос на слежение &eуспешно&f отправлен.
+    &f   &#FFA43E&l⎝ &eОжидайте&f, мы скоро начнем &aнаблюдение
+    &f
+  spec_started: |- #"&aYou are now spectating &b{player} &a."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fВы теперь &b&oнаблюдаете
+    &f   &#FFA43E&l⎝ &fЗа игроком &e{player}
+    &f
+  spec_stopped: |- #"&cYou have stopped spectating."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fВы прекратили следить
+    &f   &#FFA43E&l⎝ &fЗа игроком &e{player}
+    &f
+  spec_no_request: |- #"&cThe player &b{player} &chas not requested to be spectated."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fДанный игрок &e{player}&f не
+    &f   &#FFA43E&l⎝ &eЗапрашивал&f &7&o&nнаблюдение&f за собой.
+    &f
+  spec_not_watching: |- #"&cYou are not currently spectating anyone."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fВы не &cнаблюдаете&f за
+    &f   &#FFA43E&l⎝ &fИгроком в &eданный момент
+    &f
+  spec_already_in_use: |- #"&cYou are already spectating someone. Stop the current spectating before starting a new one."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fВы уже ведёте слежку
+    &f   &#FFA43E&l⎝ &fПрекратить слежку &8- &a/spec off
+    &f
+  spec_cooldown: |- #"&cYou need to wait before sending another spec request."
+    &f
+    &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+    &f   &#FFA43E&l⎛ &fПожалуйста, подождите &a&l1 &aминуту&f перед
+    &f   &#FFA43E&l⎝ &eОтправкой&f следующего &aзапроса&f на слежку.
+    &f
+  ############################################################
+  # +------------------------------------------------------+ #
+  # |                    Админ сообщение                   | #
+  # +------------------------------------------------------+ #
+  ############################################################
+  adm:
+    title: "&#79CA79&lВ&#79CA7F&lн&#79CA85&lи&#79CA8B&lм&#79CA91&lа&#79CA97&lн&#79CA9D&lи&#79CAA3&lе!!!"
+    subtitle: "&#8CC1FFт&#8DC4FFр&#8DC6FFе&#8EC9FFб&#8ECBFFу&#8FCEFFе&#90D1FFт&#90D3FF &#91D6FFс&#91D8FFл&#92DBFFе&#92DDFFж&#93E0FFк&#93E2FFу&#94E5FF!"
+    helper: |- #"&#FF0000Игрок {player} требует слежку за ним!"
+      &f
+      &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+      &f   &#FFA43E&l⎛ &fИгрок &aзапрашивает&f слежку!
+      &f   &#FFA43E&l⎝ &fКоманда &e/spec start {players}
+      &f
+    help: |- #"&#FF0000Игрок {player} требует слежку за ним!"
+      &f
+      &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
+      &f   &#FFA43E&l⎛ &fСледить &a/spec start &7&o[Никнейм]
+      &f   &#FFA43E&l⎝ &fПрекратить слежку &a/spec off
+      &f
+sounds:
+  admin: "BLOCK_NOTE_BLOCK_PLING"
+  player: "ENTITY_PLAYER_LEVELUP" #ENTITY_PLAYER_LEVELUP
+
+######################## Кулдауны ###########################
+
+cooldown: 1 # Укажите в минутах - Раз сколько минут можно писать // spec // спек
+SpecRequests: 15 # Укажите в секундах - Раз сколько секунд будут собираться запросы
+notification: 500 # Укажите в секундах - Раз сколько будет оповещение
