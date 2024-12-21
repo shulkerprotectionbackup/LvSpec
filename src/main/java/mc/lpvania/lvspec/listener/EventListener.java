@@ -28,6 +28,7 @@ public class EventListener implements Listener {
 
             Plugin.getInstance().getSpecCooldownMap().put(player, currentTime);
             MainCommand.getInstance().getPlayersWhoRequestedSpec().add(player);
+            MainCommand.getInstance().getContest().add(player);
             player.sendMessage(ColorUtil.hex(plugin.getConfig().getString("messages.request_player")));
             NotifyUtil.notifyPlayer(player);
             event.setCancelled(true);

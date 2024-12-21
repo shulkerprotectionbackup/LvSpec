@@ -31,7 +31,7 @@ public class StartH {
             return;
         }
 
-        if (!MainCommand.getInstance().getPlayersWhoRequestedSpec().contains(target)) {
+        if (!MainCommand.getInstance().getContest().contains(target)) {
             val text = Plugin.getInstance().getConfig().getString("messages.spec_no_request").replace("{player}", targetName);
             new MessageUtil(player, text, false);
             return;
@@ -39,7 +39,7 @@ public class StartH {
 
         MainCommand.getInstance().getWatchMap().put(player, target);
         MainCommand.getInstance().getPlayersInSpecMode().add(player);
-        MainCommand.getInstance().getPlayersWhoRequestedSpec().remove(target);
+        MainCommand.getInstance().getContest().remove(target);
 
         Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "essentials:vanish " + player.getName() + " on");
         player.setGameMode(GameMode.SPECTATOR);

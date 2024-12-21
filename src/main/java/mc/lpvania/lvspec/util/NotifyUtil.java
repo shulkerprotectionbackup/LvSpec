@@ -19,7 +19,7 @@ public class NotifyUtil {
 
         while(var6.hasNext()) {
             Player onlinePlayer = (Player)var6.next();
-            if (onlinePlayer.hasPermission("SoulSpec.*")) {
+            if (onlinePlayer.hasPermission("LvSpec.*")) {
                 onlinePlayer.sendTitle(ColorUtil.hex(title), ColorUtil.hex(subtitle), 10, 70, 20);
                 onlinePlayer.sendMessage(ColorUtil.hex(chatMessage));
                 if (adminSound != null && !adminSound.isEmpty()) {

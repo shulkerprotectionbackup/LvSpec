@@ -1,4 +1,4 @@
-package mc.lpvania.lvspec.commandmanager.tasks;
+package mc.lpvania.lvspec.tasks;
 
 import mc.lpvania.lvspec.Plugin;
 import mc.lpvania.lvspec.util.MessageUtil;
@@ -28,7 +28,7 @@ public class NotifyTask extends BukkitRunnable {
      * Метод для загрузки интервала задачи из конфигурации и её запуска.
      */
     void load() {
-        int interval = plugin.getConfig().getInt("notification"); // Интервал в тиках
+        int interval = plugin.getConfig().getInt("notification") * 20; // Интервал в тиках
         this.runTaskTimer(plugin, interval, interval); // Запуск задачи
     }
 

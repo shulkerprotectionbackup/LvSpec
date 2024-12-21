@@ -28,6 +28,9 @@ public class MainCommand implements CommandExecutor {
     @Getter
     private final Map<Player, Player> watchMap = new HashMap<>();
 
+    @Getter
+    private final Set<Player> contest = new HashSet<>();
+
     public MainCommand() {
         instance = this;
     }
@@ -41,7 +44,7 @@ public class MainCommand implements CommandExecutor {
 
         Player player = (Player) sender;
 
-        if (!player.hasPermission("SoulSpec.*")) {
+        if (!player.hasPermission("LvSpec.*")) {
             sendMessage(player, "messages.no_permission");
             return true;
         }

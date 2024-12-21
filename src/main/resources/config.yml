@@ -1,58 +1,64 @@
-#            Разрешение:
-# Для использования плагина - SoulSpec.*
-
+#
+#            LvSpec v0.2
+#           Автор: LPVania
+#         Телеграм: @LPVania
+#      Телеграм-студия: @LPVania_mc
+#
+# LvSpec.* - Для использования плагина
+#
 #       Плейсхолдер:
 # 1. {player} - Никнейм
+
 
 messages:
   spec_notification: |-
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fЗа тобой гонится &#CB2D3E&lс&#D2323D&lо&#D9373C&lф&#E13D3C&lт&#E8423B&lе&#EF473A&lр
-    &f   &#FFA43E&l⎝ &fТогда пиши в чат &7» &#3EFFB1&lспек &7&oЛибо &#3EFFB1&lspec &7«
+    &f   &8&n|&f &fЗа тобой гонится &#CB2D3E&lс&#D2323D&lо&#D9373C&lф&#E13D3C&lт&#E8423B&lе&#EF473A&lр
+    &f   &8&n|&f &fТогда пиши в чат &7» &#3EFFB1&lспек &7&oЛибо &#3EFFB1&lspec &7«
     &f
   no_permission: '&#FFA43E&l[s&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ] &8» &fУ вас нету разрешения'
   request_player: |- #"&aYou are now spectating &b{player} &a."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fЗапрос на слежение &eуспешно&f отправлен.
-    &f   &#FFA43E&l⎝ &eОжидайте&f, мы скоро начнем &aнаблюдение
+    &f   &8&n|&f &fЗапрос на слежение &eуспешно&f отправлен.
+    &f   &8&n|&f &eОжидайте&f, мы скоро начнем &aнаблюдение
     &f
   spec_started: |- #"&aYou are now spectating &b{player} &a."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fВы теперь &b&oнаблюдаете
-    &f   &#FFA43E&l⎝ &fЗа игроком &e{player}
+    &f   &8&n|&f &fВы теперь &b&oнаблюдаете
+    &f   &8&n|&f &fЗа игроком &e{player}
     &f
   spec_stopped: |- #"&cYou have stopped spectating."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fВы прекратили следить
-    &f   &#FFA43E&l⎝ &fЗа игроком &e{player}
+    &f   &8&n|&f &fВы прекратили следить
+    &f   &8&n|&f &fЗа игроком &e{player}
     &f
   spec_no_request: |- #"&cThe player &b{player} &chas not requested to be spectated."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fДанный игрок &e{player}&f не
-    &f   &#FFA43E&l⎝ &eЗапрашивал&f &7&o&nнаблюдение&f за собой.
+    &f   &8&n|&f &fДанный игрок &e{player}&f не
+    &f   &8&n|&f &eЗапрашивал&f &7&o&nнаблюдение&f за собой.
     &f
   spec_not_watching: |- #"&cYou are not currently spectating anyone."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fВы не &cнаблюдаете&f за
-    &f   &#FFA43E&l⎝ &fИгроком в &eданный момент
+    &f   &8&n|&f &fВы не &cнаблюдаете&f за
+    &f   &8&n|&f &fИгроком в &eданный момент
     &f
   spec_already_in_use: |- #"&cYou are already spectating someone. Stop the current spectating before starting a new one."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fВы уже ведёте слежку
-    &f   &#FFA43E&l⎝ &fПрекратить слежку &8- &a/spec off
+    &f   &8&n|&f &fВы уже ведёте слежку
+    &f   &8&n|&f &fПрекратить слежку &8- &a/lvspec off
     &f
   spec_cooldown: |- #"&cYou need to wait before sending another spec request."
     &f
     &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-    &f   &#FFA43E&l⎛ &fПожалуйста, подождите &a&l1 &aминуту&f перед
-    &f   &#FFA43E&l⎝ &eОтправкой&f следующего &aзапроса&f на слежку.
+    &f   &8&n|&f &fПожалуйста, подождите &a&l1 &aминуту&f перед
+    &f   &8&n|&f &eОтправкой&f следующего &aзапроса&f на слежку.
     &f
   ############################################################
   # +------------------------------------------------------+ #
@@ -65,14 +71,14 @@ messages:
     helper: |- #"&#FF0000Игрок {player} требует слежку за ним!"
       &f
       &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-      &f   &#FFA43E&l⎛ &fИгрок &aзапрашивает&f слежку!
-      &f   &#FFA43E&l⎝ &fКоманда &e/spec start {players}
+      &f   &8&n|&f &fИгрок &aзапрашивает&f слежку!
+      &f   &8&n|&f &fКоманда &e/lvspec start {players}
       &f
     help: |- #"&#FF0000Игрок {player} требует слежку за ним!"
       &f
       &f &f &#FFA43E&ls&#FFA93D&lᴘ&#FFAF3C&lᴇ&#FFB43C&lᴄ&#FFB93B&l-&#FFBF3A&lɴ&#FFC439&lᴏ&#FFC938&lᴛ&#FFCE38&lɪ&#FFD437&lꜰ&#FFA43E&lʏ
-      &f   &#FFA43E&l⎛ &fСледить &a/spec start &7&o[Никнейм]
-      &f   &#FFA43E&l⎝ &fПрекратить слежку &a/spec off
+      &f   &8&n|&f &fСледить &a/lvspec start &7&o[Никнейм]
+      &f   &8&n|&f &fПрекратить слежку &a/lvspec off
       &f
 sounds:
   admin: "BLOCK_NOTE_BLOCK_PLING"
@@ -82,4 +88,4 @@ sounds:
 
 cooldown: 1 # Укажите в минутах - Раз сколько минут можно писать // spec // спек
 SpecRequests: 15 # Укажите в секундах - Раз сколько секунд будут собираться запросы
-notification: 500 # Укажите в секундах - Раз сколько будет оповещение
+notification: 30 # Укажите в секундах - Раз сколько будет оповещение // 1 минута - это 60 секунд
