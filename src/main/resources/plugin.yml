@@ -6,3 +6,6 @@ authors: [LPVania]
 website: t.me/LPVania
 commands:
   lvspec:
+    aliases:
+      - spec
+      - cheat

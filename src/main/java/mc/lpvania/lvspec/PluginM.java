@@ -1,8 +1,11 @@
 package mc.lpvania.lvspec;
 
+import lombok.Getter;
+import lombok.val;
 import mc.lpvania.lvspec.commandmanager.MainCommand;
 import mc.lpvania.lvspec.tasks.NotifyTask;
 import mc.lpvania.lvspec.listener.EventListener;
+import mc.lpvania.lvspec.util.Hoff;
 import mc.lpvania.lvspec.util.NotifyUtil;
 import mc.lpvania.lvspec.util.UpdaterUtil;
 import org.bukkit.Bukkit;
@@ -10,17 +13,23 @@ import org.bukkit.GameMode;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.entity.Player;
 
+import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 public class PluginM {
 
     private final Plugin plugin;
+    @Getter
+    private static PluginM instance;
     private boolean notificationsSent = false;
     private UpdaterUtil updater;
+    @Getter
+    private String type;
 
     public PluginM(Plugin plugin) {
         this.plugin = plugin;
+        instance = this;
     }
 
     public void init() {
@@ -33,6 +42,22 @@ public class PluginM {
         registerEvents();
         registerCommands();
         registerTasks();
+
+        checkSystem();
+    }
+
+    void checkSystem() {
+        val cmi = Bukkit.getPluginManager().getPlugin("CMI");
+        val essx = Bukkit.getPluginManager().getPlugin("Essentials");
+
+        if (cmi != null && cmi.isEnabled()) {
+            type = "cmi";
+        } else if (essx != null && essx.isEnabled()) {
+            type = "essx";
+        } else {
+            Bukkit.getLogger().info("Не найдены ни CMI, ни Essentials.");
+            Bukkit.getPluginManager().disablePlugin(plugin);
+        }
     }
 
     void onInfo() {
@@ -61,17 +86,7 @@ public class PluginM {
 
     public void dispose() {
         offInfo();
-        MainCommand.getInstance().getPlayersInSpecMode().forEach(player -> {
-            MainCommand.getInstance().getWatchMap().remove(player);
-
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + player.getName());
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "essentials:vanish " + player.getName() + " off");
-
-            player.setGameMode(GameMode.SURVIVAL);
-        });
-
-        MainCommand.getInstance().getPlayersInSpecMode().clear();
-        Plugin.getInstance().getScheduler().shutdown();
+        Hoff.offDispose();
     }
 
 
@@ -85,6 +100,7 @@ public class PluginM {
         PluginCommand command = plugin.getCommand("lvspec");
         if (command != null) {
             command.setExecutor(new MainCommand());
+            command.setAliases(Arrays.asList("spec", "cheat"));
         }
     }
     void registerTasks() {

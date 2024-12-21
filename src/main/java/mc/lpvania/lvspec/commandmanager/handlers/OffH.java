@@ -2,6 +2,7 @@ package mc.lpvania.lvspec.commandmanager.handlers;
 
 import lombok.val;
 import mc.lpvania.lvspec.Plugin;
+import mc.lpvania.lvspec.PluginM;
 import mc.lpvania.lvspec.commandmanager.MainCommand;
 import mc.lpvania.lvspec.util.MessageUtil;
 import org.bukkit.Bukkit;
@@ -16,11 +17,20 @@ public class OffH {
             return;
         }
 
+        val type = PluginM.getInstance().getType();
+
+        if (type == null) {
+            return;
+        } else if (type.equals("cmi")) {
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + player.getName());
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "vanish " + player.getName() + " false");
+        } else if (type.equals("essx")) {
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + player.getName());
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "essentials:vanish " + player.getName() + " off");
+        }
+
         MainCommand.getInstance().getWatchMap().remove(player);
         MainCommand.getInstance().getPlayersInSpecMode().remove(player);
-
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "spawn " + player.getName());
-        Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "essentials:vanish " + player.getName() + " off");
         player.setGameMode(GameMode.SURVIVAL);
 
         val text = Plugin.getInstance().getConfig().getString("messages.spec_stopped").replace("{player}", player.getName());
