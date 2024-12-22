@@ -34,7 +34,6 @@ public class NotifyUtil {
     }
 
     public static void notifyPlayer(Player player) {
-        String playerSound = Plugin.getInstance().getConfig().getString("sounds.player");
         SoundUtil.playSound(player, "sounds.player");
 
     }

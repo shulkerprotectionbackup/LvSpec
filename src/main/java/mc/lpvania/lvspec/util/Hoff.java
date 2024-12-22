@@ -6,7 +6,6 @@ import mc.lpvania.lvspec.PluginM;
 import mc.lpvania.lvspec.commandmanager.MainCommand;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
-import org.bukkit.entity.Player;
 
 public class Hoff {
 

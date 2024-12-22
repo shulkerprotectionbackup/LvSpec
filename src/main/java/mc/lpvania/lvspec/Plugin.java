@@ -2,9 +2,6 @@ package mc.lpvania.lvspec;
 
 import lombok.Getter;
 import lombok.Setter;
-import mc.lpvania.lvspec.commandmanager.MainCommand;
-import mc.lpvania.lvspec.util.NotifyUtil;
-import mc.lpvania.lvspec.util.UpdaterUtil;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 

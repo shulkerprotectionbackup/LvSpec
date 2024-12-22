@@ -9,7 +9,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
-import java.util.concurrent.CompletableFuture;
 
 public class UpdaterUtil {
 
@@ -28,7 +27,7 @@ public class UpdaterUtil {
 
     public String url_h = "https://raw.githubusercontent.com/shulkerprotectionbackup/LvStudios/refs/heads/main/version";
     public String name_h = "LvSpec";
-    public String version_h = "v0.2";
+    public String version_h = "v0.3";
 
     public void init() {
         onInfo();
